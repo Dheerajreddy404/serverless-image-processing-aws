@@ -25,9 +25,7 @@ The system follows an event-driven serverless architecture:
 
 ---
 
-## Architecture Diagram
-
-![Architecture Diagram] (architecture.png.jpeg)
+## Architecture 
 
 Workflow:
 
@@ -46,3 +44,36 @@ User Upload → Amazon S3 (Input Bucket) → AWS Lambda → Resized Image → Am
 ---
 
 ## Project Structure
+
+aws-serverless-image-processing
+│
+├── lambda_function.py
+├── requirements.txt
+├── architecture.png.jpeg
+└── README.md
+
+
+---
+
+## Deployment (AWS Lambda)
+
+The Lambda function and dependencies are packaged before deployment.
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt -t .
+
+Create Deployment Package
+zip -r deployment-package.zip .
+Deploy to AWS Lambda
+
+Open the AWS Lambda Console
+
+Create or select your Lambda function
+
+Upload deployment-package.zip
+
+Configure the S3 trigger for the input bucket
+
+Once deployed, uploading an image to the S3 bucket will automatically trigger the Lambda function and store the resized image in the output bucket.
