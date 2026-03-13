@@ -63,9 +63,12 @@ The Lambda function and dependencies are packaged before deployment.
 
 ```bash
 pip install -r requirements.txt -t .
+```
 
-Create Deployment Package
+## Create Deployment Package
+```bash
 zip -r deployment-package.zip .
+```
 Deploy to AWS Lambda
 
 Open the AWS Lambda Console
