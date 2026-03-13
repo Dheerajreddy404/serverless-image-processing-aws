@@ -27,7 +27,7 @@ The system follows an event-driven serverless architecture:
 
 ## Architecture Diagram
 
-![Architecture Diagram](images/architecture.png.jpeg)
+![Architecture Diagram] (architecture.png.jpeg)
 
 Workflow:
 
